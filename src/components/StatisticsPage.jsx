@@ -1,23 +1,22 @@
 import React from "react";
-import { List, ListItem, Paper, Typography } from "@mui/material";
 
 const StatisticsPage = () => {
   const stats = JSON.parse(localStorage.getItem("shortenedUrls")) || [];
 
   return (
-    <Paper sx={{ p: 2 }}>
+    <div>
       {stats.length === 0 ? (
-        <Typography>No statistics available yet.</Typography>
+        <div>No statistics available yet.</div>
       ) : (
-        <List>
+        <ul>
           {stats.map((item, index) => (
-            <ListItem key={index}>
+            <li key={index}>
               Original: <strong>{item.originalUrl}</strong> → Short: <strong>{item.shortcode}</strong>
-            </ListItem>
+            </li>
           ))}
-        </List>
+        </ul>
       )}
-    </Paper>
+    </div>
   );
 };
 

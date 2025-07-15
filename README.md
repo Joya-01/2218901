@@ -2,26 +2,60 @@
 
 A minimal React app to shorten URLs, view statistics, and test basic functionality. No fancy UI, just a working interface.
 
-## Setup
+## Local Development Setup
 
-1. Clone the repository:
-   ```sh
+This project is split into two parts:
+- **Backend** (Node.js/Express): Handles URL shortening and statistics.
+- **Frontend** (React): User interface for interacting with the backend.
+
+### 1. Clone the repository
+```sh
    git clone https://github.com/Joya-01/2218901.git
    cd 2218901
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-3. Create a `.env` file in the project root with your API token:
-   ```env
-   REACT_APP_ACCESS_TOKEN=your_token_here
-   ```
-4. Start the app:
-   ```sh
-   npm start
-   ```
-   The app will run at [http://localhost:3000](http://localhost:3000).
+```
+
+### 2. Start the Backend
+```sh
+cd "backend test submission"
+npm install
+npm start
+```
+The backend will run at [http://localhost:5000](http://localhost:5000)
+
+### 3. Start the Frontend
+```sh
+cd "../frontend test submission"
+npm install
+npm start
+```
+The frontend will run at [http://localhost:3000](http://localhost:3000)
+
+### 4. Environment Variables
+Create a `.env` file in `frontend test submission/` with your API token:
+```env
+ACCESS_TOKEN=your_token_here
+```
+
+## API Endpoints (Backend)
+
+### Create Short URL
+- **Method:** POST
+- **Route:** `/shorturls`
+- **Request Body:**
+```json
+{
+  "url": "https://your-long-url.com",
+  "validity": 30,
+  "shortcode": "abcd1"
+}
+```
+- **Response (201):**
+```json
+{
+  "shortLink": "https://localhost:5000/abcd1",
+  "expiry": "2025-01-01T00:30:00Z"
+}
+```
 
 ## Usage
 - Enter a URL, validity (in minutes), and an optional shortcode in the form.

@@ -9,11 +9,11 @@ const Home = () => {
     setApiError("");
     for (let url of urls) {
       try {
-        const res = await fetch("http://20.244.56.144/shorten", {
+        const res = await fetch("http://20.244.56.144/shorturls", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`
+            Authorization: `Bearer ${process.env.ACCESS_TOKEN}`
           },
           body: JSON.stringify({ url, expiry: 30 })
         });

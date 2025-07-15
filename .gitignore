@@ -2,17 +2,22 @@
 
 # dependencies
 /node_modules
+**/node_modules/
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+**/coverage/
 
 # production
 /build
+**/build/
 
 # misc
 .DS_Store
+.env
+.env.*
 .env.local
 .env.development.local
 .env.test.local
@@ -21,3 +26,17 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Output files
+frontend-logger-test-output.txt
+loggingmiddleware
+
+# VSCode settings
+.vscode/
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# Ignore package-lock.json if you want to avoid lockfile conflicts (optional)
+# package-lock.json

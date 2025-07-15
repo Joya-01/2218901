@@ -33,8 +33,17 @@ The frontend will run at [http://localhost:3000](http://localhost:3000)
 ### 4. Environment Variables
 Create a `.env` file in `frontend test submission/` with your API token:
 ```env
-ACCESS_TOKEN=your_token_here
+REACT_APP_ACCESS_TOKEN=your_token_here
 ```
+
+### 5. Logging Middleware (Frontend)
+The logging middleware is located at:
+
+```
+frontend test submission/src/utils/loggerMiddleware.js
+```
+
+This file exports a `logEvent` function for logging events to the API. It uses the `REACT_APP_ACCESS_TOKEN` environment variable for authentication.
 
 ## API Endpoints (Backend)
 

@@ -1,4 +1,4 @@
-const accessToken = process.env.ACCESS_TOKEN;
+const accessToken = process.env.REACT_APP_ACCESS_TOKEN;
 
 export async function logEvent(source, level, route, message) {
   try {
@@ -19,4 +19,4 @@ export async function logEvent(source, level, route, message) {
   } catch (err) {
     /* Logging failed: err */
   }
-}
+} 

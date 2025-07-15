@@ -4,7 +4,7 @@ import StatisticsPage from "../components/StatisticsPage";
 
 const Stats = () => {
   useEffect(() => {
-    import("../utils/loggerMiddleware").then(({ logEvent }) => {
+    import("../utils/loggerMiddleware.js").then(({ logEvent }) => {
       logEvent("frontend", "info", "stats-page", "User viewed statistics page");
     });
   }, []);
